@@ -1,6 +1,9 @@
+package examples.calculator
+
 import java.util
 
-abstract class Tree
+
+import scala.Product
 
 /**
   * Second version of the calculator, made from scratch to check if I understood the principles used in the first
@@ -67,11 +70,19 @@ class CalculatorFromScratch {
   }
 }
 
-case class Difference(l: Tree, r: Tree) extends Tree
 
-case class Product(l: Tree, r: Tree) extends Tree
+abstract class Tree
 
-case class Var(v: String) extends Tree
+case class Difference(l: Tree, r:Tree) extends Tree
+case class Sum(l: Tree, r:Tree) extends Tree {
+  override def toString: String = l.toString + " + " + r.toString
+}
+case class Var(n: String) extends Tree {
+  override def toString: String = n
+}
+case class Const(v: Int) extends Tree {
+  override def toString: String = v.toString
+}
 
-// used to represent a variable with a string
-case class Const(c: Double) extends Tree
+case class Product(l: Tree, r: Tree) extends Tree {
+}

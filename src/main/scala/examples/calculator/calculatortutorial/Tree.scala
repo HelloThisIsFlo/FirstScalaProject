@@ -1,4 +1,4 @@
-package calculator
+package examples.calculator.calculatortutorial
 
 /**
   * Set of case class representing an arithmetic operation

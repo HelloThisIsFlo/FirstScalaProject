@@ -1,3 +1,5 @@
+package examples.timer
+
 /**
   * Simple class to demonstrate that functions can be used as arguments :D
   */

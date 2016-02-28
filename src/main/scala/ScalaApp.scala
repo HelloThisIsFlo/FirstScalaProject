@@ -1,12 +1,10 @@
-import calculator.Calculator
-import calculatoralt.CalculatorAlt
+import examples.PreviousExamples
 
 object ScalaApp {
 
   def main(args: Array[String]) {
 
-    val calculator = new Calculator
-    calculator.main()
+
 
 
 

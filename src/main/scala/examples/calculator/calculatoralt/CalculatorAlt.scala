@@ -1,4 +1,4 @@
-package calculatoralt
+package examples.calculator.calculatoralt
 
 /**
   * Created by Shock on 2/27/2016.
@@ -35,16 +35,16 @@ abstract class Tree {
   def evaluate(mapping: Mapping): Double
 }
 
-case class Difference(l: calculatoralt.Tree, r: calculatoralt.Tree) extends calculatoralt.Tree {
+case class Difference(l: Tree, r: Tree) extends Tree {
   override def evaluate(mapping: Mapping): Double = l.evaluate(mapping) - r.evaluate(mapping)
 }
-case class Product(l: calculatoralt.Tree, r: calculatoralt.Tree) extends calculatoralt.Tree {
+case class Product(l: Tree, r: Tree) extends Tree {
   override def evaluate(mapping: Mapping): Double = l.evaluate(mapping) * r.evaluate(mapping)
 }
-case class Var(v: String) extends calculatoralt.Tree {// used to represent a variable with a string
+case class Var(v: String) extends Tree {// used to represent a variable with a string
   override def evaluate(mapping: Mapping): Double = mapping(v)
 }
-case class Const(c: Double) extends calculatoralt.Tree {
+case class Const(c: Double) extends Tree {
   override def evaluate(mapping: Mapping): Double = c
 }
 

@@ -1,4 +1,4 @@
-package calculator
+package examples.calculator.calculatortutorial
 
 class Calculator {
 

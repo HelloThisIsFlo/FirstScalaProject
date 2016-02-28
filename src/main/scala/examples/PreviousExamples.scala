@@ -1,4 +1,7 @@
-import calculator.Calculator
+package examples
+
+import examples.calculator.calculatortutorial.Calculator
+import examples.timer.{Timer, TimerAnonymous}
 
 /**
   * Created by Shock on 2/27/2016.
